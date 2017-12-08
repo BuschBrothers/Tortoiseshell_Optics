@@ -52,11 +52,18 @@ html {
   justify-content: flex-end;
 }
 
-.menu span {
+.nav .menu li{
   margin: 1rem 2rem 1rem auto;
 }
 
-.mobil_menu span{
+.top .nav .mobil_menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav .mobil_menu li {
+  margin: 1rem 2rem 1rem auto;
   display: none;
 }
 
@@ -204,19 +211,12 @@ footer .right_container {
     display: none;
   }
 
-  .top .nav .mobil_menu {
-    display: flex;
-    align-items: center;
-    margin-right: 0 !important;
+  .top .nav .mobil_menu li {
+    display: inline;
   }
 
-  .menu span{
+  .menu li {
     display: none;
-  }
-
-  .mobil_menu span {
-    display: inline !important;
-    margin: 1rem 2rem 1rem auto;
   }
 
   .banner {
