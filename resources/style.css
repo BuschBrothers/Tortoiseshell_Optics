@@ -49,6 +49,7 @@ html {
 .top .nav .menu {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .menu span {
@@ -199,8 +200,6 @@ footer .right_container {
     background-position: 20%;
   }
 
-/* imagen */
-
   .logo span {
     display: none;
   }
@@ -208,6 +207,7 @@ footer .right_container {
   .top .nav .mobil_menu {
     display: flex;
     align-items: center;
+    margin-right: 0 !important;
   }
 
   .menu span{
