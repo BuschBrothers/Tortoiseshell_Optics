@@ -2,6 +2,7 @@ html {
   font-family: helvetica;
   font-size: 18px;
   line-height: 1.4;
+  line-height: normal;
 }
 
 /* TOP */
@@ -9,6 +10,8 @@ html {
 .top {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 31rem;
 
 }
@@ -52,6 +55,10 @@ html {
   margin: 1rem 2rem 1rem auto;
 }
 
+.mobil_menu span{
+  display: none;
+}
+
 /* banner */
 
 .banner_container {
@@ -60,10 +67,8 @@ html {
 }
 
 .banner {
-  background-color: white;
   display: flex;
   background-color: inherit;
-
 }
 
 .banner span {
@@ -80,16 +85,15 @@ html {
 /* MID */
 
 .mid {
-  height: 8rem;
-  width: 960px;
+  min-height: 8rem;
+  max-width: 960px;
   margin: 3rem auto;
   display: flex;
   justify-content: center;
 }
 
 .mid .element {
-  margin: auto 3rem;
-  height: 100%;
+  margin: 0 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -109,7 +113,7 @@ html {
 /* BOTTOM */
 
 .bottom {
-  width: 960px;
+  max-width: 960px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -159,4 +163,142 @@ footer .right_container {
   height: 1.5rem;
   margin-left: 4rem;
   margin-right: 1rem;
+}
+
+/* MEDIA QUERRYS */
+
+/* first breake 960px */
+
+@media only screen and (max-width: 960px) {
+  .top {
+    height: 22rem;
+  }
+
+  .top .container {
+    width: 100%;
+  }
+
+  .banner span{
+    font-size: 1.33rem;
+    margin-right: 2rem;
+    padding: 0.75rem 4rem;
+    margin-top: 5rem;
+  }
+
+  footer .right_container {
+    width: 100%;
+  }
+}
+
+/* second brake */
+
+@media only screen and (max-width: 550px) {
+
+  .top {
+    height: 17rem;
+    background-position: 20%;
+  }
+
+/* imagen */
+
+  .logo span {
+    display: none;
+  }
+
+  .top .nav .mobil_menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu span{
+    display: none;
+  }
+
+  .mobil_menu span {
+    display: inline !important;
+    margin: 1rem 2rem 1rem auto;
+  }
+
+  .banner {
+    width: 100%;
+  }
+
+  .banner span{
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 9rem;
+    margin: 9rem 0 auto 0;
+    padding: 0.7rem 0;
+    text-align: center;
+  }
+
+  .mid {
+    margin: 3.77rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mid .element {
+    margin: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 5rem;
+    text-align: center;
+  }
+
+  .mid .element {
+    display: block;
+  }
+
+  .mid .element span {
+    font-size: 0.77rem;
+  }
+
+  .mid #mobil_margin {
+    margin: 1.54rem auto;
+  }
+
+  .bottom {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .bottom .area {
+    width: 100%;
+    margin: 0 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .area .title {
+    display: flex;
+    width: 100%;
+  }
+
+  .area span {
+    margin: 0.5rem auto;
+  }
+
+  .area p {
+    font-size: 0.77rem;
+    margin: auto 0.3rem;
+    line-height: normal;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+
+  .right_container img {
+    margin: auto;
+  }
+
+  footer span {
+    display: none;
+  }
+
 }
